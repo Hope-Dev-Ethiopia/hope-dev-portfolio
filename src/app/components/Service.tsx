@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { MdFitScreen } from "react-icons/md";
 import { Code, Smartphone, Monitor, Layout, X } from "lucide-react";
 
@@ -70,6 +70,18 @@ const Services: React.FC = () => {
 		setActiveFeatures([]);
 	};
 
+	useEffect(() => {
+		if (showModal) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "";
+		}
+
+		return () => {
+			document.body.style.overflow = "";
+		};
+	}, [showModal]);
+
 	return (
 		<section
 			id="services"
@@ -112,8 +124,9 @@ const Services: React.FC = () => {
 			</div>
 
 			{showModal && (
-				<div className="fixed inset-0 z-50 bg-primary bg-opacity-50 flex items-center justify-center px-4">
-					<div className="bg-foreground rounded-lg shadow-lg max-w-md w-full p-6 relative transform transition-all duration-1000 ease-in-out scale-100 opacity-100">
+				<div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+					<div className="fixed inset-0 z-40 bg-transparent bg-opacity-50"></div>
+					<div className="bg-foreground z-50 rounded-lg shadow-lg max-w-md w-full p-6 relative">
 						<button
 							onClick={handleCloseModal}
 							className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
