@@ -12,7 +12,7 @@ const Header: React.FC = () => {
 	useEffect(() => {
 		const handleScroll = () => {
 			const offset = window.scrollY;
-			if (offset > 50) {
+			if (offset > 15) {
 				setIsScrolled(true);
 			} else {
 				setIsScrolled(false);
@@ -37,8 +37,8 @@ const Header: React.FC = () => {
 
 	return (
 		<header
-			className={`fixed w-full z-50 font-[family-name:var(--font-poppins)] transition-all duration-300 ${
-				isScrolled ? "bg-primary shadow-md py-2" : "bg-transparent py-4"
+			className={`fixed w-full z-50  font-[family-name:var(--font-poppins)] mb-50 transition-all duration-300 ${
+				isScrolled ? "bg-primary shadow-md py-2" : "bg-transparent py-2"
 			}`}
 		>
 			<div className="container mx-auto px-4 md:px-6">
