@@ -7,6 +7,7 @@ import {
 	Montserrat,
 } from "next/font/google";
 import "./globals.css";
+import CustomCursor from "./components/CustomCursor";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -48,8 +49,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${geistSans.variable} ${notoSans.variable} ${montserrat.variable} ${poppins.variable} ${geistMono.variable} antialiased`}
+				className={`${geistSans.variable} ${notoSans.variable} ${montserrat.variable} ${poppins.variable} ${geistMono.variable} antialiased cursor-none`}
 			>
+				<CustomCursor />
 				{children}
 			</body>
 		</html>

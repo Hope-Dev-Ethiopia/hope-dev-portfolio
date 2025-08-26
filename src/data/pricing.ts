@@ -11,8 +11,8 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: "Basic",
     description: "Perfect for small projects and startups",
-    priceMonthly: 999,
-    priceAnnual: 9990,
+    priceMonthly: 99,
+    priceAnnual: 999,
     features: [
       "Single web or mobile application",
       "Basic UI/UX design",
@@ -25,8 +25,8 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: "Professional",
     description: "Ideal for growing businesses",
-    priceMonthly: 2499,
-    priceAnnual: 23990,
+    priceMonthly: 249,
+    priceAnnual: 2399,
     popular: true,
     features: [
       "Web and mobile application",
@@ -42,8 +42,8 @@ export const pricingPlans: PricingPlan[] = [
   {
     name: "Enterprise",
     description: "For large-scale projects and businesses",
-    priceMonthly: 4999,
-    priceAnnual: 47990,
+    priceMonthly: 499,
+    priceAnnual: 4799,
     features: [
       "Multi-platform development",
       "Premium UI/UX design",

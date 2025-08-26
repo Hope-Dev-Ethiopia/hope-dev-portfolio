@@ -43,7 +43,7 @@ const Testimonials: React.FC = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             What Our Clients Say
           </h2>
-          <p>Don't just take our word for it. Here's what our clients have to
+          <p>Don&apos;t just take our word for it. Here&apos;s what our clients have to
             say about working with us</p>
         </div>
 
@@ -51,7 +51,7 @@ const Testimonials: React.FC = () => {
           {/* Arrows */}
           <button
             onClick={prev}
-            className="absolute -left-10 top-1/2 transform -translate-y-1/2 bg-secondary text-foreground hover:text-accent p-2 rounded-full shadow-md hidden md:block"
+            className="absolute -left-12 top-1/2 transform -translate-y-1/2 bg-primary text-foreground hover:text-accent p-2 rounded-full shadow-md hidden md:block"
           >
             <ChevronLeft />
           </button>
@@ -59,7 +59,7 @@ const Testimonials: React.FC = () => {
           <div className="bg-primary p-8 rounded-lg shadow-md text-center">
             <Quote className="w-8 h-8 text-accent mx-auto mb-6 opacity-30" />
             <p className="text-lg text-foreground mb-6 leading-relaxed">
-              "{testimonials[current].quote}"
+              &quot;{testimonials[current].quote}&quot;
             </p>
             <p className="text-accent font-semibold">{testimonials[current].name}</p>
             <p className="text-foreground text-sm">{testimonials[current].role}</p>
@@ -67,7 +67,7 @@ const Testimonials: React.FC = () => {
 
           <button
             onClick={next}
-            className="absolute -right-10 top-1/2 transform -translate-y-1/2 bg-secondary text-foreground hover:text-accent p-2 rounded-full shadow-md hidden md:block"
+            className="absolute -right-12 top-1/2 transform -translate-y-1/2 bg-primary text-foreground hover:text-accent p-2 rounded-full shadow-md hidden md:block"
           >
             <ChevronRight />
           </button>

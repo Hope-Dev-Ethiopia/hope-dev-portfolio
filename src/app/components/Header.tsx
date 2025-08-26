@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "./ui/Link";
 import Image from "next/image";
-import Logo from "@/public/HopeLogo.png";
 
 const Header: React.FC = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -38,20 +37,20 @@ const Header: React.FC = () => {
 	return (
 		<header
 			className={`fixed w-full z-50  font-[family-name:var(--font-poppins)] mb-50 transition-all duration-300 ${
-				isScrolled ? "bg-primary shadow-md py-2" : "bg-transparent py-2"
+				isScrolled ? "bg-primary shadow-md py-4" : "bg-primary py-4"
 			}`}
 		>
 			<div className="container mx-auto px-4 md:px-6">
 				<div className="flex justify-between items-center">
 					<div className="flex gap-2 items-center">
-						<Image src={Logo} alt="hope_logo" width={35} height={35} />
+						<Image src='/HopeLogo.png' alt="hope_logo" width={35} height={35} />
 						<span className="text-2xl font-bold uppercase text-foreground">
 							hope
 						</span>
 					</div>
 
 					{/* desktop Nav*/}
-					<nav className="hidden md:flex space-x-8">
+					<nav className="hidden md:flex space-x-6">
 						{navLinks.map((link) => (
 							<Link
 								key={link.name}
@@ -80,12 +79,12 @@ const Header: React.FC = () => {
 				{/* mobile menu */}
 				{isMenuOpen && (
 					<div className="md:hidden pt-4 pb-2 absolute top-full left-0 right-0 bg-primary shadow-md">
-						<nav className="flex flex-col space-y-3 px-4">
+						<nav className="flex flex-col items-center space-y-3 px-4">
 							{navLinks.map((link) => (
 								<Link
 									key={link.name}
 									href={link.href}
-									className="text-foreground hover:text-accent py-2 font-medium"
+									className="text-foreground text-center w-full p-2 hover:bg-secondary hover:text-accent py-2 font-medium"
 									onClick={() => setIsMenuOpen(false)}
 								>
 									{link.name}

@@ -7,7 +7,7 @@ const team = [
 	{
 		name: "JO",
 		role: "AI Magician",
-		img: "https://randomuser.me/api/portraits/men/32.jpg",
+		img: "https://avatar.iran.liara.run/public/37",
 		social: {
 			github: "#",
 			linkedin: "#",
@@ -17,7 +17,7 @@ const team = [
 	{
 		name: "Tewobsta",
 		role: "Web Dev & Problem Solver",
-		img: "https://randomuser.me/api/portraits/women/45.jpg",
+		img: "https://avatar.iran.liara.run/public/18",
 		social: {
 			github: "#",
 			linkedin: "#",
@@ -27,7 +27,7 @@ const team = [
 	{
 		name: "Henok",
 		role: "App Architect with a Desktop Edge",
-		img: "https://randomuser.me/api/portraits/men/65.jpg",
+		img: "https://avatar.iran.liara.run/public/93",
 		social: {
 			github: "#",
 			linkedin: "#",
@@ -37,7 +37,7 @@ const team = [
 	{
 		name: "Tsion",
 		role: "UX-focused Developer & Designer",
-		img: "https://randomuser.me/api/portraits/women/76.jpg",
+		img: "https://avatar.iran.liara.run/public/91",
 		social: {
 			github: "#",
 			linkedin: "#",
@@ -47,7 +47,7 @@ const team = [
 	{
 		name: "Yeshrun",
 		role: "Full Stack Mobile Wizard",
-		img: "https://randomuser.me/api/portraits/men/12.jpg",
+		img: "https://avatar.iran.liara.run/public/37",
 		social: {
 			github: "#",
 			linkedin: "#",

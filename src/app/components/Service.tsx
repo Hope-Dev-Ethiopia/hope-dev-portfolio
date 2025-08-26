@@ -113,7 +113,7 @@ const Services: React.FC = () => {
 							<p className="text-foreground mb-4">{service.description}</p>
 							<button
 								onClick={() => handleShowModal(service.title, service.features)}
-								className="text-accent hover:underline hover:cursor-pointer flex justify-center items-center gap-3 font-medium"
+								className="text-foreground border border-accent rounded-md px-3 py-2 bg-accent hover:underline hover:cursor-pointer flex justify-center items-center gap-3 font-medium"
 							>
 								More Details{" "}
 								<MdFitScreen className="text-2xl hover:underline " />
@@ -126,17 +126,17 @@ const Services: React.FC = () => {
 			{showModal && (
 				<div className="fixed inset-0 z-50 flex items-center justify-center px-4">
 					<div className="fixed inset-0 z-40 bg-transparent bg-opacity-50"></div>
-					<div className="bg-foreground z-50 rounded-lg shadow-lg max-w-md w-full p-6 relative">
+					<div className="bg-primary z-50 rounded-none border border-gray-300 shadow-lg max-w-md w-full p-6 relative">
 						<button
 							onClick={handleCloseModal}
 							className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
 						>
-							<X className="w-5 h-5 hover:cursor-pointer" />
+							<X className="w-5 h-5 hover:cursor-pointer hover:text-accent" />
 						</button>
-						<h3 className="text-xl font-semibold mb-4 text-primary">
+						<h3 className="text-xl font-semibold mb-4 text-foreground">
 							{modalTitle}
 						</h3>
-						<ul className="list-disc pl-5 space-y-2 text-sm text-gray-700">
+						<ul className="list-disc pl-5 space-y-2 text-sm text-gray-400">
 							{activeFeatures.map((feature, idx) => (
 								<li key={idx}>{feature}</li>
 							))}

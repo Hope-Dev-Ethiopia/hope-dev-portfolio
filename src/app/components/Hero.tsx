@@ -5,7 +5,7 @@ import { Link } from "./ui/Link";
 
 const Hero: React.FC = () => {
 	return (
-		<section className="relative h-screen flex items-center bg-secondary font-[family-name:var(--font-mont)] from-blue-50 to-sky-50">
+		<section className="relative h-screen pt-12 flex items-center bg-secondary font-[family-name:var(--font-mont)] from-blue-50 to-sky-50">
 			<div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 			<div className="container mx-auto px-4 md:px-6 z-10">
 				<div className="flex flex-col md:flex-row items-center justify-between">
@@ -23,14 +23,14 @@ const Hero: React.FC = () => {
 						<div className="flex space-x-4">
 							<Link
 								href="#services"
-								className="px-6 py-3 bg-accent text-foreground rounded-lg hover:bg-accent-hover transition-colors duration-300 font-medium flex items-center"
+								className="px-6 text-sm py-3 sm:text-sm md:text-lg lg:text-lg bg-accent text-foreground rounded-lg hover:bg-accent-hover transition-colors duration-300 font-medium flex items-center"
 							>
 								Our Services
-								<ArrowRight className="ml-2 h-5 w-5" />
+								<ArrowRight className="ml-2 md:h-5 md:w-5 sm:h-4 sm:w-4 w-5" />
 							</Link>
 							<Link
 								href="#contact"
-								className="px-6 py-3 border-2 border-accent text-foreground rounded-lg hover:bg-primary transition-colors duration-300 font-medium"
+								className="px-6 py-3 text-sm border-2 sm:text-sm md:text-lg lg:text-lg border-accent text-foreground rounded-lg hover:bg-primary transition-colors duration-300 font-medium"
 							>
 								Contact Us
 							</Link>

@@ -31,9 +31,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 						alt={project.title}
 						className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110"
 					/>
-					<div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:cursor-pointer transition-opacity duration-300">
+					<div onClick={openModal} className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 hover:cursor-pointer transition-opacity duration-300">
 						<button
-							onClick={openModal}
 							className="p-2 bg-white rounded-full text-accent hover:text-accent-hover transition-colors duration-200"
 							aria-label="View project details"
 						>
@@ -99,14 +98,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
 			{isModalOpen && (
 				<div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-transparent bg-opacity-80">
-					<div className="bg-white rounded-lg overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col">
-						<div className="p-4 bg-gray-50 flex justify-between items-center border-b">
-							<h3 className="text-xl font-bold text-gray-900">
+					<div className="bg-primary rounded-lg overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col">
+						<div className="p-4 bg-secondary flex justify-between items-center">
+							<h3 className="text-xl font-bold text-foreground">
 								{project.title}
 							</h3>
 							<button
 								onClick={closeModal}
-								className="text-gray-500 hover:text-gray-700 hover:cursor-pointer focus:outline-none"
+								className="text-gray-500 hover:text-accent hover:cursor-pointer focus:outline-none"
 								aria-label="Close modal"
 							>
 								<X size={24} />
@@ -121,21 +120,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 							/>
 
 							<div className="mb-6">
-								<h4 className="text-lg font-semibold text-gray-900 mb-2">
+								<h4 className="text-lg font-semibold text-foreground mb-2">
 									Project Overview
 								</h4>
-								<p className="text-gray-600">{project.description}</p>
+								<p className="text-gray-400">{project.description}</p>
 							</div>
 
 							<div className="mb-6">
-								<h4 className="text-lg font-semibold text-gray-900 mb-2">
+								<h4 className="text-lg font-semibold text-foreground mb-2">
 									Technologies Used
 								</h4>
 								<div className="flex flex-wrap gap-2">
 									{project.technologies.map((tech, index) => (
 										<span
 											key={index}
-											className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+											className="px-3 py-1 bg-accent text-foreground font-bold rounded-full text-sm"
 										>
 											{tech}
 										</span>
@@ -145,10 +144,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
 							{project.features && (
 								<div className="mb-6">
-									<h4 className="text-lg font-semibold text-gray-900 mb-2">
+									<h4 className="text-lg font-semibold text-gray-300 mb-2">
 										Key Features
 									</h4>
-									<ul className="list-disc pl-5 text-gray-600 space-y-1">
+									<ul className="list-disc pl-5 text-gray-400 space-y-1">
 										{project.features.map((feature, index) => (
 											<li key={index}>{feature}</li>
 										))}
@@ -157,7 +156,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 							)}
 						</div>
 
-						<div className="p-4 bg-gray-50 border-t flex justify-end space-x-4">
+						<div className="p-4 bg-secondary flex justify-end space-x-4">
 							{project.liveUrl && (
 								<a
 									href={project.liveUrl}
@@ -174,7 +173,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 									href={project.repoUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="px-4 py-2 border border-gray-300 text-primary rounded-lg hover:bg-gray-50 transition-colors duration-200 flex items-center"
+									className="px-4 py-2 border border-gray-300 text-foreground rounded-lg hover:bg-primary transition-colors duration-200 flex items-center"
 								>
 									<Github size={16} className="mr-2" />
 									<span>View Repository</span>
