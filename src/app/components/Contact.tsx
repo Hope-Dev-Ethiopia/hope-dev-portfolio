@@ -154,8 +154,8 @@ const Contact: React.FC = () => {
 								</label>
 								<input
 									type="text"
-									id="name"
-									name="name"
+									id="username"
+									name="username"
 									value={formData.username}
 									onChange={handleChange}
 									className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent ${
