@@ -125,7 +125,7 @@ const Services: React.FC = () => {
 
 			{showModal && (
 				<div className="fixed inset-0 z-50 flex items-center justify-center px-4">
-					<div className="fixed inset-0 z-40 bg-transparent bg-opacity-50"></div>
+					<div className="fixed inset-0 z-40 bg-black/30 backdrop-blur-sm"></div>
 					<div className="bg-primary z-50 rounded-none border border-gray-300 shadow-lg max-w-md w-full p-6 relative">
 						<button
 							onClick={handleCloseModal}

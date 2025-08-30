@@ -5,7 +5,7 @@ import { Link } from "./ui/Link";
 
 const Hero: React.FC = () => {
 	return (
-		<section className="relative h-screen pt-12 flex items-center bg-secondary font-[family-name:var(--font-mont)] from-blue-50 to-sky-50">
+		<section className="relative h-screen sm:pt-16 flex items-center bg-secondary font-[family-name:var(--font-mont)] from-blue-50 to-sky-50">
 			<div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
 			<div className="container mx-auto px-4 md:px-6 z-10">
 				<div className="flex flex-col md:flex-row items-center justify-between">

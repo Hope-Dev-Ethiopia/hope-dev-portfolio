@@ -36,7 +36,7 @@ const Header: React.FC = () => {
 
 	return (
 		<header
-			className={`fixed w-full z-50  font-[family-name:var(--font-poppins)] mb-50 transition-all duration-300 ${
+			className={`fixed w-full z-50  font-[family-name:var(--font-poppins)] mb-0 transition-all duration-300 ${
 				isScrolled ? "bg-primary shadow-md py-4" : "bg-primary py-4"
 			}`}
 		>

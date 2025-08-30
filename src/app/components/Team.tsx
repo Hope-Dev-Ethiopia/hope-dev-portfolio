@@ -7,7 +7,7 @@ const team = [
 	{
 		name: "JO",
 		role: "AI Magician",
-		img: "https://avatar.iran.liara.run/public/37",
+		img: "https://avatar.iran.liara.run/public/6",
 		social: {
 			github: "#",
 			linkedin: "#",
@@ -17,7 +17,7 @@ const team = [
 	{
 		name: "Tewobsta",
 		role: "Web Dev & Problem Solver",
-		img: "https://avatar.iran.liara.run/public/18",
+		img: "https://avatar.iran.liara.run/public/91",
 		social: {
 			github: "#",
 			linkedin: "#",
@@ -27,7 +27,7 @@ const team = [
 	{
 		name: "Henok",
 		role: "App Architect with a Desktop Edge",
-		img: "https://avatar.iran.liara.run/public/93",
+		img: "https://avatar.iran.liara.run/public/28",
 		social: {
 			github: "#",
 			linkedin: "#",
@@ -37,7 +37,7 @@ const team = [
 	{
 		name: "Tsion",
 		role: "UX-focused Developer & Designer",
-		img: "https://avatar.iran.liara.run/public/91",
+		img: "https://avatar.iran.liara.run/public/98",
 		social: {
 			github: "#",
 			linkedin: "#",

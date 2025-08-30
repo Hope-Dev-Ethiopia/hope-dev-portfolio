@@ -47,7 +47,7 @@ export const projects: Project[] = [
   {
     title: 'Project Management Tool',
     description: 'A powerful desktop application designed for team collaboration and project management. Features include task assignment, progress tracking, file sharing, and real-time updates.',
-    image: 'https://images.pexels.com/photos/3861970/pexels-photo-3861970.jpeg',
+    image: 'https://images.pexels.com/photos/7793671/pexels-photo-7793671.jpeg',
     category: 'desktop',
     technologies: ['Electron', 'React', 'Node.js', 'Socket.io'],
     features: [

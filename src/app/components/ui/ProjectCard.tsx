@@ -97,7 +97,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 			</div>
 
 			{isModalOpen && (
-				<div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-transparent bg-opacity-80">
+				<div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/30 backdrop-blur-sm">
 					<div className="bg-primary rounded-lg overflow-hidden max-w-4xl w-full max-h-[90vh] flex flex-col">
 						<div className="p-4 bg-secondary flex justify-between items-center">
 							<h3 className="text-xl font-bold text-foreground">

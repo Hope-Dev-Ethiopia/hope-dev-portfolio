@@ -3,14 +3,14 @@ import React, { useState } from "react";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 interface FormState {
-	name: string;
+	username: string;
 	email: string;
 	subject: string;
 	message: string;
 }
 
 interface FormErrors {
-	name?: string;
+	username?: string;
 	email?: string;
 	subject?: string;
 	message?: string;
@@ -18,7 +18,7 @@ interface FormErrors {
 
 const Contact: React.FC = () => {
 	const [formData, setFormData] = useState<FormState>({
-		name: "",
+		username: "",
 		email: "",
 		subject: "",
 		message: "",
@@ -33,8 +33,8 @@ const Contact: React.FC = () => {
 	const validateForm = (): boolean => {
 		const newErrors: FormErrors = {};
 
-		if (!formData.name.trim()) {
-			newErrors.name = "Name is required";
+		if (!formData.username.trim()) {
+			newErrors.username = "Name is required";
 		}
 
 		if (!formData.email.trim()) {
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
 		}
 	};
 
-	const handleSubmit = (e: React.FormEvent) => {
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
 
 		if (!validateForm()) {
@@ -74,19 +74,36 @@ const Contact: React.FC = () => {
 		}
 
 		setIsSubmitting(true);
+		setSubmitStatus("idle");
 
-		setTimeout(() => {
-			setIsSubmitting(false);
+		try {
+			const response = await fetch("http://localhost:3000/api/messages", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(formData),
+			});
+
+			if (!response.ok) {
+				const errorData = await response.json();
+				throw new Error(errorData.message || "Something went wrong!");
+			}
+
 			setSubmitStatus("success");
 			setFormData({
-				name: "",
+				username: "",
 				email: "",
 				subject: "",
 				message: "",
 			});
-
+		} catch (error: any) {
+			console.error("Submission error:", error);
+			setSubmitStatus("error");
+		} finally {
+			setIsSubmitting(false);
 			setTimeout(() => setSubmitStatus("idle"), 5000);
-		}, 1500);
+		}
 	};
 
 	return (
@@ -139,15 +156,15 @@ const Contact: React.FC = () => {
 									type="text"
 									id="name"
 									name="name"
-									value={formData.name}
+									value={formData.username}
 									onChange={handleChange}
 									className={`w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent ${
-										errors.name ? "border-red-500" : "border-gray-600"
+										errors.username ? "border-red-500" : "border-gray-600"
 									}`}
 									placeholder="John Doe"
 								/>
-								{errors.name && (
-									<p className="mt-1 text-red-500 text-sm">{errors.name}</p>
+								{errors.username && (
+									<p className="mt-1 text-red-500 text-sm">{errors.username}</p>
 								)}
 							</div>
 
