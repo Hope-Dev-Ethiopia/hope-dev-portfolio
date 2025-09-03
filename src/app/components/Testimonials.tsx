@@ -51,7 +51,7 @@ const Testimonials: React.FC = () => {
           {/* Arrows */}
           <button
             onClick={prev}
-            className="absolute -left-12 top-1/2 transform -translate-y-1/2 bg-primary text-foreground hover:text-accent p-2 rounded-full shadow-md hidden md:block"
+            className="absolute hover:cursor-pointer -left-12 top-1/2 transform -translate-y-1/2 bg-primary text-foreground hover:text-accent p-2 rounded-full shadow-md hidden md:block"
           >
             <ChevronLeft />
           </button>
@@ -67,7 +67,7 @@ const Testimonials: React.FC = () => {
 
           <button
             onClick={next}
-            className="absolute -right-12 top-1/2 transform -translate-y-1/2 bg-primary text-foreground hover:text-accent p-2 rounded-full shadow-md hidden md:block"
+            className="absolute hover:cursor-pointer -right-12 top-1/2 transform -translate-y-1/2 bg-primary text-foreground hover:text-accent p-2 rounded-full shadow-md hidden md:block"
           >
             <ChevronRight />
           </button>
@@ -79,7 +79,7 @@ const Testimonials: React.FC = () => {
             <button
               key={index}
               onClick={() => setCurrent(index)}
-              className={`w-3 h-3 rounded-full ${
+              className={`w-3 hover:cursor-pointer h-3 rounded-full ${
                 index === current ? "bg-accent" : "bg-foreground opacity-30"
               }`}
             ></button>

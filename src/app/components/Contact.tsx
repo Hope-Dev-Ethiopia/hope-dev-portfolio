@@ -2,6 +2,14 @@
 import React, { useState } from "react";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
+class CustomError extends Error {
+    constructor(message: string) {
+        super(message);
+        this.name = "CustomError";
+        Object.setPrototypeOf(this, CustomError.prototype);
+    }
+}
+
 interface FormState {
 	username: string;
 	email: string;
@@ -97,9 +105,11 @@ const Contact: React.FC = () => {
 				subject: "",
 				message: "",
 			});
-		} catch (error: any) {
+		} catch (error) {
+			if(error instanceof CustomError) {
 			console.error("Submission error:", error);
 			setSubmitStatus("error");
+			}
 		} finally {
 			setIsSubmitting(false);
 			setTimeout(() => setSubmitStatus("idle"), 5000);
