@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
         <div className="space-y-4">
           <div className="flex items-center gap-2">
             <Image src={Logo} alt="Hope Logo" width={32} height={32} />
-            <span className="text-xl font-bold uppercase">HOPE</span>
+            <span className="text-xl font-bold uppercase">hope</span>
           </div>
           <p className="text-sm leading-relaxed">
             We build beautiful, functional digital experiences that help businesses thrive in the digital world.
